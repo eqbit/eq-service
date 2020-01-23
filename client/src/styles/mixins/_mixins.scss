@@ -1,0 +1,14 @@
+@import "../grid/variables";
+
+@mixin mq($width, $type: max) {
+  @media(#{$type}-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin media($breakpoint) {
+  @media (#{$media-direction}-width: map-get($breakpoints, $breakpoint))
+  {
+    @content
+  }
+}
